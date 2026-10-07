@@ -27,11 +27,20 @@ Compatible with DSH `>=0.2.0-rc.1` (developer preview; breaking changes will be 
 
 ## Install
 
+**Via GitHub archive (recommended; direct-download friendly incl. mainland China, no npm account needed)**:
+
+```sh
+dsh plugin --profile web add 'https://codeload.github.com/wobenshiwomu/dsh-calm/tar.gz/v0.1.0'
+```
+
+Or via the GUI plugin manager: sidebar → Plugins → Add plugin → paste the URL above. Restart DSH to apply.
+The `v0.1.0` segment is the version tag; upgrade by reinstalling with a newer tag.
+
+**Via npm (once published)**:
+
 ```sh
 dsh plugin --profile web add dsh-calm
 ```
-
-Or via the GUI plugin manager: sidebar → Plugins → Add plugin → `dsh-calm`. Restart DSH to apply.
 
 ## Config
 

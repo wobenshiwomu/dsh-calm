@@ -24,13 +24,20 @@
 
 ## 安装
 
-**npm（推荐）**：
+**GitHub 直装（推荐，国内网络可直连，无需 npm 账号）**：
+
+```sh
+dsh plugin --profile web add 'https://codeload.github.com/wobenshiwomu/dsh-calm/tar.gz/v0.1.0'
+```
+
+或在图形界面：侧栏「插件」→ 添加插件 → 填上面这条 URL。装完重启 DSH 生效。
+URL 末段的 `v0.1.0` 是版本标签；升级时换成本仓库的新版本标签重装即可。
+
+**npm（发布后可用）**：
 
 ```sh
 dsh plugin --profile web add dsh-calm
 ```
-
-或在图形界面：侧栏「插件」→ 添加插件 → 填 `dsh-calm`。装完重启 DSH 生效。
 
 **本地开发挂载**（改代码即热重载，无需发布）：
 
