@@ -1,0 +1,66 @@
+{
+  "name": "dsh-calm",
+  "version": "0.1.0",
+  "description": "Emotional checkpoint & repair for DeepSeek Harness — soothe, fold & seal heated exchanges, then resume from a clean context · 情绪检查点与修复：安抚、折叠封存、干净上下文继续",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cordis",
+    "cordis-plugin",
+    "plugin",
+    "calm",
+    "emotion",
+    "de-escalation",
+    "conflict-repair",
+    "session",
+    "agent-safety",
+    "audit"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "main": "src/index.mjs",
+  "files": [
+    "src",
+    "cordis.patch.yml",
+    "README.md",
+    "README.en.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0",
+    "dsh": ">=0.2.0-rc.1"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-llm": "^0.2.0-rc.1",
+    "@deepseek-ai/dsh-tools": "^0.2.0-rc.1",
+    "@deepseek-ai/schemastery": "^3.18.4"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh-llm": {
+      "optional": true
+    },
+    "@deepseek-ai/dsh-tools": {
+      "optional": true
+    },
+    "@deepseek-ai/schemastery": {
+      "optional": true
+    }
+  },
+  "scripts": {
+    "test": "node test/sim.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wobenshiwomu/dsh-calm.git"
+  },
+  "homepage": "https://github.com/wobenshiwomu/dsh-calm#readme"
+}
