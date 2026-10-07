@@ -58,6 +58,11 @@
   "scripts": {
     "test": "node test/sim.mjs"
   },
+  "devDependencies": {
+    "@deepseek-ai/dsh-llm": "^0.2.0-rc.2",
+    "@deepseek-ai/dsh-tools": "^0.2.0-rc.2",
+    "@deepseek-ai/schemastery": "^3.18.4"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wobenshiwomu/dsh-calm.git"

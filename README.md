@@ -33,19 +33,20 @@ dsh plugin --profile web add 'https://codeload.github.com/wobenshiwomu/dsh-calm/
 或在图形界面：侧栏「插件」→ 添加插件 → 填上面这条 URL。装完重启 DSH 生效。
 URL 末段的 `v0.1.0` 是版本标签；升级时换成本仓库的新版本标签重装即可。
 
-**npm（发布后可用）**：
+**npm 渠道（尚未上架）**：上架后即可 `dsh plugin --profile web add dsh-calm`。
 
-```sh
-dsh plugin --profile web add dsh-calm
+**本地源码挂载**（开发用，改代码即热重载）：
+
+在 profile 的用户层 `~/.dsh/profiles/<名>/cordis.patch.yml` 里按**绝对路径**挂载插件入口：
+
+```yaml
+- insert:
+    - id: dsh-calm
+      name: '/绝对路径/到/dsh-calm/src/index.mjs'
+      config: { window: 5, enableTermination: true, allowRawSealedRead: false }
 ```
 
-**本地开发挂载**（改代码即热重载，无需发布）：
-
-```sh
-dsh web --patch ./calm.patch.yml
-```
-
-或在 profile 的 `cordis.patch.yml` 里写本地文件的绝对路径。
+保存后重启 DSH 生效；也可把这段 YAML 存为独立文件，用 `dsh web --patch ./该文件.yml` 启动测试实例。
 
 ## 配置
 
@@ -78,5 +79,6 @@ dsh web --patch ./calm.patch.yml
 ## 测试
 
 ```sh
-node test/sim.mjs   # 仿真测试：分类/安抚/滚动窗口/剪+总结/闸门/封存策略/跨重启
+npm install   # 首次：安装测试所需的宿主依赖（@deepseek-ai/dsh-llm 等）
+npm test      # 仿真测试：分类/安抚/滚动窗口/剪+总结/闸门/封存策略/跨重启（53 项断言）
 ```

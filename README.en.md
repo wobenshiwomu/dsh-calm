@@ -36,11 +36,20 @@ dsh plugin --profile web add 'https://codeload.github.com/wobenshiwomu/dsh-calm/
 Or via the GUI plugin manager: sidebar → Plugins → Add plugin → paste the URL above. Restart DSH to apply.
 The `v0.1.0` segment is the version tag; upgrade by reinstalling with a newer tag.
 
-**Via npm (once published)**:
+**Via npm (not published yet)**: once it is, `dsh plugin --profile web add dsh-calm` will work.
 
-```sh
-dsh plugin --profile web add dsh-calm
+**Local source mount (for development; hot-reloads on edit)**:
+
+In your profile's user layer `~/.dsh/profiles/<name>/cordis.patch.yml`, mount the entry by absolute path:
+
+```yaml
+- insert:
+    - id: dsh-calm
+      name: '/absolute/path/to/dsh-calm/src/index.mjs'
+      config: { window: 5, enableTermination: true, allowRawSealedRead: false }
 ```
+
+Restart DSH to apply.
 
 ## Config
 
@@ -68,7 +77,8 @@ marked `ignorable`, and this DSH version does not expose the `ignorable` marker 
 ## Test
 
 ```sh
-node test/sim.mjs
+npm install   # one-time: host deps needed by the tests (@deepseek-ai/dsh-llm, …)
+npm test      # = node test/sim.mjs (53 assertions)
 ```
 
 ## License
