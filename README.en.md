@@ -1,5 +1,7 @@
 # dsh-calm
 
+[![DSH Market](https://raw.githubusercontent.com/2BingLing/dsh-market/master/assets/readme/badge-listed-en.svg)](https://dsh.market/)
+
 > A DeepSeek Harness plugin: **Emotional Checkpoint & Repair**.
 > When the user turns abusive, dsh-calm neither fights back nor pretends nothing happened —
 > it enters a soothing mode, then folds & seals the heated exchange, injects a distilled

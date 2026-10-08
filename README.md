@@ -1,5 +1,7 @@
 # dsh-calm
 
+[![DSH Market](https://raw.githubusercontent.com/2BingLing/dsh-market/master/assets/readme/badge-listed-zh.svg)](https://dsh.market/)
+
 > DeepSeek Harness 插件：**情绪检查点与修复（Emotional Checkpoint & Repair）**。
 > 用户骂街时不硬抗、也不装没事——进入安抚模式修复关系；用户愿意继续时，
 > 把争吵段落折叠封存、注入结论总结，回到干净上下文继续任务。
